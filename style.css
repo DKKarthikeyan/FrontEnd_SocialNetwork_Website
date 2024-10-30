@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+/* Colors */
+
+:root{
+    --button-color: #4070f4;
+    --grey-color:rgb(117, 116, 116);
+
+}
+
+/* Font Style */
+:root{
+    --body-font: "Poppins", sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.7rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1 rem;
+    }
+}
+
+/* Margins */
+:root{
+    --mb-1 : 0.5rem;
+    --mb-2 : 1rem;
+    --mb-3 : 1.5rem;
+    --mb-4 : 2rem;
+    --mb-5 : 2.5rem;
+    --mb-6 : 3rem;
+}
+
+/* Z-index */
+:root{
+    --z-back : -10;
+    --z-normal : 1;
+    --z-tooltip : 10;
+    --z-fixed : 100;
+}
+
+
+
+
+
+
+p,h1{
+    text-align: center;
+}
+
+
+
+.backgroundImage{
+    background-image: url(/images/background.jpg);
+    width: 100%;
+  
+    height: 10vh;
+    background-position: center;
+    background-size: cover;
+
+}
+.personImage{
+    background-image: url(/images/profilePic.jpg);
+    padding: 2.5rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 83px;
+    margin: 0 auto;
+}
+
+.followContainer{
+    display: flex;
+    justify-content:space-around;
+}
+
+
+#bold{
+    font-weight: bold;
+}
+
+
+#grey{
+    color: var(--grey-color);
+}
+
+
+
+.personSocial{
+    display: flex;
+    justify-content: center;
+}
+
+.personContainer{
+    position: relative;
+    top: -2.5rem;
+}
+
+#personDescription{
+    line-height: 1.4rem;
+}
+.personDescription{
+    position: relative;
+    padding-top: 1rem;
+}
+.personDescription::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(120, 120, 120);
+    
+    width: 90%;
+    height: 0.1rem;
+    left: 1rem;
+   
+   
+    
+
+}
+
+
+                /* PADDING THE PERSON CONTAINER */
+.personName{
+    padding-top: 6px;
+    
+}
+.personCaption,.personMail{
+    padding-top: 3px;
+    font-size: var(--small-font-size);
+
+}
+
+.followContainer{
+    padding-top: 1.5rem;
+    
+}
+#personDescription{
+    padding-top: 0.8rem;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
+
+.personSocial{
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+.personSocial a{
+    padding: 10px;
+}
+
+
+                    /* PERSON NAVIGATION MENU */
+.navigationContainer{
+    font-size: var(--small-font-size);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    
+}
+
+
+.personFollowButton{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+#followButton{
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+#followButton:hover{
+    background-color:#4070f4cc ;
+}
+
+
+
+                     /* PHOTO STYLING */
+img{
+ width: 100%;
+ 
+  height: 100%;
+   
+    
+
+}
+
+
+.photosContainer div,.galleryImages div{
+    width: 48%;
+}
+
+
+.photosContainer{
+    padding-top: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+}
+
+
+.photosImages{
+    padding-top: 1rem; 
+
+}
+
+
+
+
+                                         /* GALLERIES STYLING */
+
+
+.galleryContainer{
+    margin-top: 3rem;
+}
+
+.header{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 2rem;
+    position: relative;
+    z-index: -1;
+}
+
+.galleryImages{
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.galleryImages img{
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+
+
+                                  /* GROUP STYLING */ 
+
+.groupConatiner{
+    margin-top: 2rem;
+}
+.groupImages{
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.groupImage img{
+    width: 100%;
+}
+#groupText{
+    text-align: justify;
+    font-weight: bold;
+    padding-top: 5px;
+    
+}
+.groupImageTwo{
+    padding-top: 4rem;
+}
+
+
+
+
+                                  /* ABOUT STYLING */
+.aboutContainer{
+    margin-top: 2rem;
+}
+ .aboutText{
+    padding: 2rem 1rem;
+    text-align: justify;
+ }                                 
+
+                                     /* HEADER STYLING */
+
+.header:after{
+   
+    
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 0.1rem;
+    background-color: black;
+    right: 0;
+    left: 20vw;
+   
+   
+    bottom: -0.5rem;
+}
+
+                                     /* Social media icon Style */
+
+
+
+i{
+    transition: 0.5s ease;
+}
+i:hover{
+    color: #4070f4;
+   
+    transform: translateY(-5px);
+
+
+
+}
+
+
+                                       /* Navigation header style */
+.initialGrey{
+    color: var(--grey-color);
+    transition: color 0.5s ease;
+
+}
+
+.initialGrey:hover{
+    color: black;
+
+}
+
+
+
+
+
+
+
+@media  screen and (min-width:767px) {
+
+    img{
+        width: 100%;
+        
+    
+    }
+    .backgroundImage{
+        height: 20vh;
+        position: fixed;
+    }
+
+    .others{
+        position: fixed;
+        top: 25%;
+        right: 0;
+        width: 65%;
+        height: 100vh; 
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding-left: 1rem;
+        padding-right: 2rem;
+        float: right;
+        padding-bottom: 14rem;
+        scroll-behavior: smooth;
+       
+    }
+  
+ 
+    /* .others{
+        position: fixed;
+        top: 10rem;
+        left: 25rem;
+     
+        padding-left: 1rem;
+        width: 65%;
+        height: 800px;
+
+
+        float: right;
+        padding-right: 2rem;
+      
+    } */
+
+
+
+    .personContainer{
+        position: fixed;
+        width: 35%;
+        top: 14%;
+    }
+
+
+
+
+
+      /* PADDING THE PERSON CONTAINER */
+
+
+.personName{
+    padding-top: 0.9rem;
+    font-size: 1.3rem;
+    
+}
+
+
+.personCaption,.personMail{
+    padding-top: 6px;
+    font-size: var(--normal-font-size)
+
+}
+
+
+.followContainer{
+    padding-top: 1.5rem;
+    
+}
+#personDescription{
+    padding-top: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.8rem;
+   
+}
+
+.personSocial{
+    padding-top: 3rem;
+    
+}
+.personSocial a{
+    padding: 10px;
+}
+
+
+
+
+
+
+/* PADDING THE NAVIGATION */
+
+
+
+.navigationBox{
+    display: flex;
+    position: fixed;
+    width: 65%;
+    justify-content:space-between;
+    align-items: center;
+    top:20%;
+    background-color: white;
+    right: 1rem;
+    padding: 1rem;
+    z-index: 100;
+  
+   
+
+    overflow: hidden;
+    
+   
+  
+}
+.navigationContainer {
+   padding: 0;
+   
+    flex: 3;
+    
+    font-size: var(--body-font);
+}
+
+.personFollowButton{
+    padding-top: 0;
+}
+
+
+.header::after{
+    left: 12.5vw;
+}
+
+
+
+.galleryImage{
+    width:48.5%;
+}
+
+
+
+
+
+
+}
+
+
+
+@media screen and (min-width:1023px) {
+
+
+    .photosContainer div,.galleryImages div{
+        width: 33%;
+    }
+    
+  
+    .groupImage img{
+        width: 100%;
+        height: 30vh;
+        
+    }
+    .groupImageOne,.groupImageTwo{
+        display: flex;
+    }
+    .groupImage,.groupText{
+        flex: 1;
+    }
+    #groupText{
+        padding-left: 2rem;
+        
+        text-align: justify;
+        padding-top: 1rem;
+    }
+  
+
+
+    
+}
+
+
+@media  screen and (min-width:1281px){
+    :root{
+        --body-font: "Poppins", sans-serif;
+        --big-font-size: 1.2rem;
+        --h2-font-size: 1.5rem;
+        --normal-font-size: 1.3rem;
+        --small-font-size: 0.7rem;
+    }
+    .personName{
+      
+        font-size: 1.5rem;
+        
+    }
+    
+    
+    .personCaption,.personMail{
+       
+        font-size: var(--normal-font-size)
+    
+    }
+    .navigationContainer {
+       
+         font-size: var(--big-font-size);
+     }
+     
+    
+
+}
